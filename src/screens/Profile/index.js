@@ -19,7 +19,7 @@ const Profile = () => {
   return (
     <Container>
       <Text>Profile Screen</Text>
-      <Button title="sair" onPress={handleLogoutClick} />
+      <Button title="לחץ כאן להתנתק" onPress={handleLogoutClick} />
     </Container>
   );
 };

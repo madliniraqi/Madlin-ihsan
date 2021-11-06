@@ -16,10 +16,10 @@ import {
 
 import Api from '../../Api';
 
-import BarberLogo from '../../assets/barber.svg';
+import BarberLogo from '../../assets/preloadlogo.svg';
 import InputField from '../../components/InputField';
 import PersonIcon from '../../assets/person.svg';
-import EmailIcon from '../../assets/email.svg';
+import EmailIcon from '../../assets/phone1.svg';
 import LockIcon from '../../assets/lock.svg';
 
 const SignUp = () => {
@@ -54,7 +54,7 @@ const SignUp = () => {
       }
     } else {
       // eslint-disable-next-line no-alert
-      alert('Preencha todos os campos!');
+      alert('נא למלא את כל השדות');
     }
   };
 
@@ -70,32 +70,32 @@ const SignUp = () => {
       <FormArea>
         <InputField
           IconSvg={PersonIcon}
-          placeholder="Digite seu nome completo"
+          placeholder="שם "
           value={nameField}
           onChangeText={(text) => setNameField(text)}
         />
         <InputField
           IconSvg={EmailIcon}
-          placeholder="Digite seu email"
+          placeholder="מספר טלפון"
           value={emailField}
           onChangeText={(text) => setEmailField(text)}
         />
         <InputField
           IconSvg={LockIcon}
-          placeholder="Digite sua senha"
+          placeholder="סיסמא"
           value={passwordField}
           onChangeText={(text) => setPasswordField(text)}
           password
         />
 
         <CustomButton onPress={handleSignPress}>
-          <CustomButtonText>CADASTRAR</CustomButtonText>
+          <CustomButtonText>הירשם</CustomButtonText>
         </CustomButton>
       </FormArea>
 
       <SignMessage onPress={handleSignMessagePress}>
-        <SignMessageText>Já possui uma conta?</SignMessageText>
-        <SignMessageTextBold>Faça Login</SignMessageTextBold>
+        <SignMessageText>נרשמת ויש לך מנוי?</SignMessageText>
+        <SignMessageTextBold>כנס </SignMessageTextBold>
       </SignMessage>
     </Container>
   );

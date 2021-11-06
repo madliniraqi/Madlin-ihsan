@@ -159,21 +159,29 @@ const FinishButtonText = styled.Text`
 `;
 
 const months = [
-  'Janeiro',
-  'Fevereiro',
-  'Março',
-  'Abril',
-  'Maio',
-  'Junho',
-  'Julho',
-  'Agosto',
-  'Setembro',
-  'Outubro',
-  'Novembro',
-  'Dezembro',
+  'ינואר',
+  'פברואר',
+  'מרץ',
+  'אפריל',
+  'מאי',
+  'יוני',
+  'יולי',
+  'אוגוסט',
+  'ספטמבר',
+  'אוקטובר',
+  'נובמבר',
+  'דצמבר',
 ];
 
-const days = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
+const days = [
+    'ראשון',
+    'שני',
+    'שלישי', 
+    'רביעי', 
+    'חמישי', 
+    'שישי', 
+    'שבת'
+    ];
 
 const AppointmentModal = ({show, setShow, user, service}) => {
   const [selectedYear, setSelectedYear] = useState(0);
@@ -380,7 +388,7 @@ const AppointmentModal = ({show, setShow, user, service}) => {
           )}
 
           <FinishButton onPress={handleFinishButton}>
-            <FinishButtonText>Finalizar Agendamento</FinishButtonText>
+            <FinishButtonText>קבע תור</FinishButtonText>
           </FinishButton>
         </ModalBody>
       </ModalArea>

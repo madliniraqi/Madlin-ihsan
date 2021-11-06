@@ -76,6 +76,7 @@ const Barber = () => {
 
   const handleFavButton = () => {
     setFavorited(!favorited);
+    api.setFavorited(userInfo.id)
   };
 
   const handleChooseService = (index) => {

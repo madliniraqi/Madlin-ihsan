@@ -16,9 +16,9 @@ import {
 
 import Api from '../../Api';
 
-import BarberLogo from '../../assets/barber.svg';
+import BarberLogo from '../../assets/preloadlogo.svg';
 import InputField from '../../components/InputField';
-import EmailIcon from '../../assets/email.svg';
+import EmailIcon from '../../assets/phone1.svg';
 import LockIcon from '../../assets/lock.svg';
 
 const SignIn = () => {
@@ -48,11 +48,13 @@ const SignIn = () => {
         });
       } else {
         // eslint-disable-next-line no-alert
-        alert('E-mail e/ou senha não correspondem!');
+       // alert('E-mail e/ou senha não correspondem!');
+         alert('אחד הפרטים שגוי -מספר טלפון\סיסמא ');
       }
     } else {
       // eslint-disable-next-line no-alert
-      alert('Preencha todos os campos!');
+      //alert('Preencha todos os campos!');
+      alert('נא למלא את כל השדות');
     }
   };
 
@@ -68,13 +70,13 @@ const SignIn = () => {
       <FormArea>
         <InputField
           IconSvg={EmailIcon}
-          placeholder="Digite seu email"
+          placeholder= "מספר טלפון" //"Digite seu email"
           value={emailField}
           onChangeText={(text) => setEmailField(text)}
         />
         <InputField
           IconSvg={LockIcon}
-          placeholder="Digite sua senha"
+          placeholder="סיסמא"
           value={passwordField}
           onChangeText={(text) => setPasswordField(text)}
           password
@@ -86,8 +88,9 @@ const SignIn = () => {
       </FormArea>
 
       <SignMessage onPress={handleSignMessagePress}>
-        <SignMessageText>Ainda não possui uma conta?</SignMessageText>
-        <SignMessageTextBold>Cadastre-se</SignMessageTextBold>
+         
+         <SignMessageText>עוד לא נרשמת ? </SignMessageText>
+        <SignMessageTextBold>לחץ כאן</SignMessageTextBold>
       </SignMessage>
     </Container>
   );

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
-  background-color: #555;
+  background-color: #dce8e1;
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ export const FormArea = styled.View`
 
 export const CustomButton = styled.TouchableOpacity`
   height: 60px;
-  background-color: salmon;
+  background-color: #268596;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -34,12 +34,12 @@ export const SignMessage = styled.TouchableOpacity`
 
 export const SignMessageText = styled.Text`
   font-size: 16px;
-  color: #fff;
+  color: black;
 `;
 
 export const SignMessageTextBold = styled.Text`
   font-size: 16px;
-  color: #fff;
+  color: #ecd54c;
   font-weight: bold;
   margin-left: 5px;
 `;

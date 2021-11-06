@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: #eee;
+  background-color: #dce8e1;
 `;
 
 export const Scroller = styled.ScrollView`
@@ -19,7 +19,7 @@ export const HeaderArea = styled.View`
 export const HeaderTitle = styled.Text`
   width: 250px;
   font-size: 24px;
-  color: #777;
+  color: black;
   font-weight: bold;
 `;
 
@@ -29,7 +29,7 @@ export const SearchButton = styled.TouchableOpacity`
 `;
 
 export const LocationArea = styled.View`
-  background-color: #555;
+  background-color:  #268596;
   height: 60px;
   border-radius: 30px;
   flex-direction: row;

@@ -19,7 +19,7 @@ export const SwipeDot = styled.View`
 
 export const SwipeItem = styled.View`
   flex: 1;
-  background-color: salmon;
+  background-color:  #268596;;
 `;
 
 export const SwipeImage = styled.Image`
@@ -29,7 +29,8 @@ export const SwipeImage = styled.Image`
 
 export const FakeSwiper = styled.View`
   height: 240px;
-  background-color: salmon;
+  background-color:#dce8e1;
+
 `;
 
 export const PageBody = styled.View`

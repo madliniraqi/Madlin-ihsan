@@ -114,8 +114,8 @@ const Home = () => {
           <RefreshControl refreshing={refreshing} onRefresh={handleOnRefresh} />
         }>
         <HeaderArea>
-          <HeaderTitle numberOfLines={2}>
-            Encontre o seu barbeiro favorito
+          <HeaderTitle numberOfLines={1}>
+           בחר את הספר שלך
           </HeaderTitle>
 
           <SearchButton onPress={() => navigation.navigate('Search')}>
@@ -125,7 +125,7 @@ const Home = () => {
 
         <LocationArea>
           <LocationInput
-            placeholder="Onde você está?"
+            placeholder="איפה אתה נמצא?"
             placeholderTextColor="#ccc"
             value={locationText}
             onChangeText={(text) => setLocationText(text)}

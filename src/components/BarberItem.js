@@ -67,7 +67,7 @@ const BarberItem = ({barberData}) => {
         <Stars stars={stars} showNumber />
 
         <SeeProfile>
-          <SeeProfileText>Ver Perfil</SeeProfileText>
+          <SeeProfileText>צפה בפרופיל</SeeProfileText>
         </SeeProfile>
       </Infos>
     </Card>
