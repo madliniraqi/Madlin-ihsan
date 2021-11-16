@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
+import { View, StyleSheet,  Text, Button ,Image} from 'react-native';
 import {Platform, RefreshControl} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {request, PERMISSIONS} from 'react-native-permissions';
 import Geolocation from '@react-native-community/geolocation';
+import BarberLogo from '../../assets/preloadlogo.svg';
+ 
+ 
 
 import {
   Container,
@@ -15,6 +19,7 @@ import {
   LocationFinder,
   LoadingIcon,
   BarbersArea,
+  LogoArea,
 } from './styles';
 
 import Api from '../../Api';
@@ -108,34 +113,24 @@ const Home = () => {
   };
 
   return (
+
+
     <Container>
       <Scroller
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={handleOnRefresh} />
         }>
-        <HeaderArea>
-          <HeaderTitle numberOfLines={1}>
-           בחר את הספר שלך
-          </HeaderTitle>
+        
+   
+     
+      <LogoArea>
+      <View >
+        <Image source={require('../../assets/nidallogo.jpeg')} style ={{width:300 ,height:300}} />
+     </View> 
+      </LogoArea>  
+       
 
-          <SearchButton onPress={() => navigation.navigate('Search')}>
-            <SearchIcon width="26" height="26" fill="salmon" />
-          </SearchButton>
-        </HeaderArea>
-
-        <LocationArea>
-          <LocationInput
-            placeholder="איפה אתה נמצא?"
-            placeholderTextColor="#ccc"
-            value={locationText}
-            onChangeText={(text) => setLocationText(text)}
-            onEndEditing={handleLocationSearch}
-          />
-
-          <LocationFinder onPress={handleLocationFinder}>
-            <MyLocationIcon width="26" height="26" fill="#ccc" />
-          </LocationFinder>
-        </LocationArea>
+        
 
         {loading && <LoadingIcon size="large" color="#fff" />}
 

@@ -39,6 +39,16 @@ export const LocationArea = styled.View`
   margin-top: 30px;
 `;
 
+export const LogoArea = styled.View`
+   border-radius: 30px;
+  flex-direction: row;
+  align-items: center;
+  width: 300;
+  height: 300;
+   margin-top: 30px;
+ 
+`;
+
 export const LocationInput = styled.TextInput`
   flex: 1;
   font-size: 16px;
@@ -58,3 +68,6 @@ export const BarbersArea = styled.View`
   margin-top: 30px;
   margin-bottom: 30px;
 `;
+
+
+ 

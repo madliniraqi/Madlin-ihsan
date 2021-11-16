@@ -19,7 +19,7 @@ export const SwipeDot = styled.View`
 
 export const SwipeItem = styled.View`
   flex: 1;
-  background-color:  #268596;;
+  background-color: #dce8e1;
 `;
 
 export const SwipeImage = styled.Image`
@@ -29,30 +29,32 @@ export const SwipeImage = styled.Image`
 
 export const FakeSwiper = styled.View`
   height: 240px;
-  background-color:#dce8e1;
-
+  background-color: #dce8e1;
 `;
 
 export const PageBody = styled.View`
-  background-color: #fff;
+  background-color: #FFF;
   border-top-left-radius: 50px;
   margin-top: -50px;
   min-height: 400px;
+
+  
 `;
 
 export const UserInfoArea = styled.View`
   flex-direction: row;
   margin-top: -30px;
+  
 `;
 
 export const UserAvatar = styled.Image`
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   border-radius: 20px;
   margin-left: 30px;
   margin-right: 20px;
   border-width: 4px;
-  border-color: #fff;
+  border-color: green;
 `;
 export const UserInfo = styled.View`
   flex: 1;
@@ -87,7 +89,8 @@ export const ServiceArea = styled.View`
 export const ServicesTitle = styled.Text`
   font-size: 18px;
   font-weight: bold;
-  color: salmon;
+  color: gold;
+  
   margin-left: 30px;
   margin-bottom: 20px;
 `;
@@ -115,7 +118,7 @@ export const ServicePrice = styled.Text`
 `;
 
 export const ChooseServiceButton = styled.TouchableOpacity`
-  background-color: salmon;
+  background-color: #B8E2D6;
   border-radius: 10px;
   padding: 10px 15px;
 `;
@@ -123,7 +126,7 @@ export const ChooseServiceButton = styled.TouchableOpacity`
 export const ChooseServiceButtonText = styled.Text`
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: #1D5D2E;
 `;
 
 export const TestimonialArea = styled.View`

@@ -17,7 +17,7 @@ const ModalArea = styled.View`
 `;
 
 const ModalBody = styled.View`
-  background-color: salmon;
+  background-color: #B8E2D6;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   min-height: 300px;
@@ -42,14 +42,14 @@ const UserInfo = styled.View`
 `;
 
 const UserAvatar = styled.Image`
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   border-radius: 20px;
   margin-right: 15px;
 `;
 
 const UserName = styled.Text`
-  font-size: 18px;
+  font-size: 25px;
   color: #333;
   font-weight: bold;
 `;
@@ -60,13 +60,13 @@ const ServiceInfo = styled.View`
 `;
 
 const ServiceName = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #444;
 `;
 
 const ServicePrice = styled.Text`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #444;
 `;
@@ -99,31 +99,33 @@ const DateNextArea = styled.TouchableOpacity`
 `;
 
 const DateList = styled.ScrollView`
-  height: 100px;
+  height: 70px;
 `;
 
+
 const DateItem = styled.TouchableOpacity`
-  width: 45px;
+  width: 55px;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 8px 0;
   opacity: ${(props) => (props.available ? 1 : '0.3')};
-  background-color: ${(props) => (props.selected ? 'salmon' : '#fff')};
+   
+  background-color:  ${(props) => (props.selected ? 'gold' : '#fff')};
 `;
 
 const DateItemWeekDay = styled.Text`
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
-  color: ${(props) => (props.selected ? '#fff' : '#555')};
+  color: ${(props) => (props.selected ? 'white' : '#555')};
 `;
 
 const DateItemNumber = styled.Text`
   font-size: 16px;
   font-weight: bold;
-  color: ${(props) => (props.selected ? '#fff' : '#555')};
+  color: ${(props) => (props.selected ? 'white' : '#555')};
 `;
 
 const TimeList = styled.ScrollView``;
@@ -134,7 +136,7 @@ const TimeItem = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: ${(props) => (props.selected ? 'salmon' : '#fff')};
+  background-color: ${(props) => (props.selected ? 'gold' : '#fff')};
 `;
 
 const TimeItemText = styled.Text`
@@ -159,29 +161,28 @@ const FinishButtonText = styled.Text`
 `;
 
 const months = [
-  'ינואר',
-  'פברואר',
+  'ינו',
+  'פבר',
   'מרץ',
-  'אפריל',
+  'אפר',
   'מאי',
   'יוני',
   'יולי',
-  'אוגוסט',
-  'ספטמבר',
-  'אוקטובר',
-  'נובמבר',
-  'דצמבר',
+  'אוג',
+  'ספט',
+  'אוק',
+  'נוב',
+  'דצמ',
 ];
 
 const days = [
-    'ראשון',
-    'שני',
-    'שלישי', 
-    'רביעי', 
-    'חמישי', 
-    'שישי', 
-    'שבת'
-    ];
+  'יום א',
+ 'יום ב', 
+ 'יום ג',
+  'יום ד',
+   'יום ה',
+    'יום ו',
+     'שבת'];
 
 const AppointmentModal = ({show, setShow, user, service}) => {
   const [selectedYear, setSelectedYear] = useState(0);
@@ -203,7 +204,8 @@ const AppointmentModal = ({show, setShow, user, service}) => {
       let daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
       let newListDays = [];
 
-      for (let i = 1; i <= daysInMonth; i++) {
+ var startday = new Date().getDay(); //get the day to start the calender days of month
+      for (let i = startday+7; i <= daysInMonth; i++) {
         let d = new Date(selectedYear, selectedMonth, i);
         let year = d.getFullYear();
         let month = d.getMonth() + 1;
@@ -273,7 +275,7 @@ const AppointmentModal = ({show, setShow, user, service}) => {
 
   const handleFinishButton = async () => {
     if (
-      user.id &&
+
       service !== null &&
       selectedYear > 0 &&
       selectedMonth > 0 &&
@@ -288,18 +290,17 @@ const AppointmentModal = ({show, setShow, user, service}) => {
         selectedDay,
         selectedHour,
       );
-
       if (response.error === '') {
         setShow(false);
         navigation.navigate('Appointments');
       } else {
         alert(`Error: ${response.error}`);
       }*/
-      alert('Agendamento realizado com sucesso!');
+      alert('התהליך הסתיים בהצלחה');
       setShow(false);
       navigation.navigate('Home');
     } else {
-      alert('Preencha todos os dados');
+      alert('עליך למלא את כל הנתונים בבקשה');
     }
   };
 

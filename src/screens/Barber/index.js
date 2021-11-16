@@ -76,7 +76,6 @@ const Barber = () => {
 
   const handleFavButton = () => {
     setFavorited(!favorited);
-    api.setFavorited(userInfo.id)
   };
 
   const handleChooseService = (index) => {
@@ -112,25 +111,15 @@ const Barber = () => {
           <UserInfoArea>
             <UserAvatar source={{uri: userInfo.avatar}} />
 
-            <UserInfo>
-              <UserName>{userInfo.name}</UserName>
-              <Stars stars={userInfo.stars} showNumber />
-            </UserInfo>
+            
 
-            <UserFavButton onPress={handleFavButton}>
-              {favorited ? (
-                <FavoriteFullIcon width="24" height="24" fill="#ff0000" />
-              ) : (
-                <FavoriteIcon width="24" height="24" fill="#ff0000" />
-              )}
-            </UserFavButton>
           </UserInfoArea>
 
           {loading && <LoadingIcon size="large" color="#333" />}
 
           {userInfo.services && (
             <ServiceArea>
-              <ServicesTitle>Lista de Serviços</ServicesTitle>
+             
               {userInfo.services.map((service, index) => (
                 <ServiceItem key={index}>
                   <ServiceInfo>
@@ -139,37 +128,18 @@ const Barber = () => {
                   </ServiceInfo>
                   <ChooseServiceButton
                     onPress={() => handleChooseService(index)}>
-                    <ChooseServiceButtonText>Agendar</ChooseServiceButtonText>
+                    <ChooseServiceButtonText>לקביעת תור לחץ כאן</ChooseServiceButtonText>
                   </ChooseServiceButton>
                 </ServiceItem>
               ))}
             </ServiceArea>
           )}
 
-          {userInfo.testimonials && userInfo.testimonials.length > 0 && (
-            <TestimonialArea>
-              <Swiper
-                style={{height: 110}}
-                showsPagination={false}
-                showsButtons
-                prevButton={<NavPrevIcon width="35" height="35" fill="#ccc" />}
-                nextButton={<NavNextIcon width="35" height="35" fill="#ccc" />}>
-                {userInfo.testimonials.map((testimonial, index) => (
-                  <TestimonialItem key={index}>
-                    <TestimonialInfo>
-                      <TestimonialName>{testimonial.name}</TestimonialName>
-                      <Stars stars={testimonial.rate} showNumber={false} />
-                    </TestimonialInfo>
-                    <TestimonialBody>{testimonial.body}</TestimonialBody>
-                  </TestimonialItem>
-                ))}
-              </Swiper>
-            </TestimonialArea>
-          )}
+         
         </PageBody>
       </Scroller>
       <BackButton onPress={handleBackButton}>
-        <BackIcon width="44" height="44" fill="#fff" />
+        <BackIcon width="44" height="44" fill="white" />
       </BackButton>
 
       <AppointmentModal

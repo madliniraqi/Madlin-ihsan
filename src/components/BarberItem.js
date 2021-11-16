@@ -6,16 +6,18 @@ import Stars from '../components/Stars';
 
 const Card = styled.TouchableOpacity`
   background-color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 20px;
   padding: 15px;
   flex-direction: row;
+ 
 `;
 
 const Avatar = styled.Image`
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
   border-radius: 20px;
+  
 `;
 
 const Infos = styled.View`
@@ -25,23 +27,25 @@ const Infos = styled.View`
 `;
 
 const UserName = styled.Text`
-  font-size: 17px;
+  font-size: 28px;
   font-weight: bold;
   color: #222;
 `;
 
 const SeeProfile = styled.View`
-  width: 92px;
-  height: 28px;
+  width: 100%;
+  height: 45px;
   border-radius: 10px;
-  background-color: salmon;
+  background-color: #B8E2D6;
   justify-content: center;
   align-items: center;
 `;
 
 const SeeProfileText = styled.Text`
   font-size: 15px;
-  color: #fff;
+  color: #1D592Eed;
+    font-weight: bold;
+      align-items: center;
 `;
 
 const BarberItem = ({barberData}) => {
@@ -64,10 +68,10 @@ const BarberItem = ({barberData}) => {
       <Infos>
         <UserName>{name}</UserName>
 
-        <Stars stars={stars} showNumber />
+      
 
         <SeeProfile>
-          <SeeProfileText>צפה בפרופיל</SeeProfileText>
+          <SeeProfileText>כנס לפרופיל</SeeProfileText>
         </SeeProfile>
       </Infos>
     </Card>

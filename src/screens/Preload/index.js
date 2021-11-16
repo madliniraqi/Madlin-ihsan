@@ -7,7 +7,7 @@ import {UserContext} from '../../contexts/UserContext';
 
 import Api from '../../Api';
 
-import BarberLogo from '../../assets/barber.svg';
+import BarberLogo from '../../assets/preloadlogo.svg';
 
 const Preload = () => {
   const {dispatch: userDispatch} = useContext(UserContext);
